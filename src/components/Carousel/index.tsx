@@ -5,11 +5,11 @@ import HeaderRickMorty from "../../assets/RickMortyPortal.jpg";
 import MortyAndRick from "../../assets/rickandmortyCar.png";
 import PortalImage from "../../assets/RickAndMorty.png";
 
-class DemoCarousel extends Component {
+class CarouselHeader extends Component {
   render() {
     return (
       <Carousel
-        className="max-w-4xl mx-auto"
+        className="max-w-8xl mx-auto"
         autoPlay
         showStatus={false}
         showThumbs={false}
@@ -18,7 +18,7 @@ class DemoCarousel extends Component {
         <div>
           <img
             src={HeaderRickMorty}
-            className="w-full h-80 object-cover rounded-lg"
+            className="w-full h-96 object-cover rounded-lg"
             alt="RickMorty1"
           />
         </div>
@@ -41,4 +41,4 @@ class DemoCarousel extends Component {
   }
 }
 
-export default DemoCarousel;
+export default CarouselHeader;

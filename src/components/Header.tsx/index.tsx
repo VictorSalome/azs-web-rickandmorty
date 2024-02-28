@@ -1,14 +1,14 @@
-import DemoCarousel from "../Carrousel";
+import CarouselHeader from "../Carousel";
 
 export const Header = () => {
   return (
-    <div className="header text-white flex justify-center relative">
-      <div className="headerContainer relative max-w-1500 w-full rounded-lg">
-        <div className="bannerContainer">
-          <DemoCarousel />
+    <div className=" text-white relative p-3">
+      <div className=" relative max-w-screen-lg mx-auto rounded-lg overflow-hidden ">
+        <div>
+          <CarouselHeader />
         </div>
-        <div className="descContainer absolute bottom-5 left-5 flex flex-col gap-5">
-          <h1 className="font-bold text-2xl md:text-4xl">
+        <div className="absolute bottom-0 left-0 p-6">
+          <h1 className="font-bold text-3xl md:text-5xl">
             Acompanhe as aventuras de Rick e Morty
           </h1>
           <p className="font-light text-lg">Todos os episódios disponíveis!</p>
