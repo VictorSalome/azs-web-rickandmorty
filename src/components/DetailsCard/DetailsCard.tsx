@@ -32,7 +32,6 @@ interface DetailsBoxProps {
 const DetailsBox: React.FC<DetailsBoxProps> = ({ details }) => {
   const { addFavorites, active, checkActive } = useStateContext();
   const { air_date, episode, name, characters } = details?.episode || {};
- 
 
   useEffect(() => {
     return checkActive(details?.episode);
@@ -40,8 +39,8 @@ const DetailsBox: React.FC<DetailsBoxProps> = ({ details }) => {
 
   return (
     <section className="relative min-h-screen flex justify-center py-20 transition duration-500">
-      <div className="relative w-full max-w-screen-lg h-96 shadow-xl bg-gray-900 rounded-3xl">
-        <div className="absolute top-0 left-0 w-full h-full flex bg-blue-700 rounded-xl">
+      <div className="relative w-full max-w-screen-lg h-96 shadow-xl bg-gray-900 rounded-3xl xl:w-4/5">
+        <div className="absolute top-0 left-0 w-full h-full flex  rounded-xl">
           <span
             onClick={() => addFavorites(details.episode)}
             className={`relative text-white text-2xl m-4 cursor-pointer ${
@@ -50,8 +49,8 @@ const DetailsBox: React.FC<DetailsBoxProps> = ({ details }) => {
           >
             <FaHeart />
           </span>
-          <div className="w-1/2 h-full relative">
-            <Card sx={{ maxWidth: 300 }}>
+          <div className="w-1/2 h-full relative flex items-center">
+            <Card className="full-width-card">
               <CardMedia
                 component="img"
                 height="140"

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { INFO_EPISODES } from "../../querys";
 import { Link } from "react-router-dom";
-import CardInfo from "../Card";
+import CardInfo from "../CardEpisodi";
 import { Episode } from "../../interfaces/interface";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -37,7 +37,7 @@ export const ListSearch = () => {
 
   return (
     <div className="text-black relative w-4/5 mx-auto">
-      <div className="max-w-8xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-3 sm:px-7 lg:px-8">
         <div className="flex items-center">
           <h1 className="text-xl font-bold text-white md:text-2xl lg:text-3xl">
             Episódios
@@ -72,8 +72,7 @@ export const ListSearch = () => {
             {episodesList?.map((episode) => (
               <SwiperSlide key={episode.id}>
                 <Link to={`/episode/${episode.id}`}>
-                  <div className="sm:w-full md:w-1/3 lg:w-full ml-16">
-                    {/* Condicional para determinar o tamanho do card */}
+                  <div className="sm:w-full md:w-1/3 lg:w-full ml-16 md:ml-1">
                     <CardInfo episodes={episode} />
                   </div>
                 </Link>

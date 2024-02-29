@@ -17,8 +17,9 @@ const CardInfo: React.FC<{ episodes: Episode }> = ({ episodes }) => {
   return (
     <Card
       sx={{
-        maxWidth: { xs: 150, md: 200 },
+        maxWidth: { xs: 200, md: 200 },
         overflow: "hidden",
+        marginLeft: { xs: "-20px", md: "0px" }, // Adicione valores de margem esquerda diferentes para telas xs e md
       }}
     >
       <CardActionArea>
