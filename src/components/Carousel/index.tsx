@@ -25,14 +25,14 @@ class CarouselHeader extends Component {
         <div>
           <img
             src={MortyAndRick}
-            className="w-full h-80 object-cover rounded-lg"
+            className="w-full h-96 object-cover rounded-lg"
             alt="RickMorty 2"
           />
         </div>
         <div>
           <img
             src={PortalImage}
-            className="w-full h-80 object-cover rounded-lg"
+            className="w-full h-96 object-cover rounded-lg"
             alt="RickMorty 3"
           />
         </div>
