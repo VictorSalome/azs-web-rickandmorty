@@ -1,4 +1,6 @@
 export interface Episode {
+  image: string | undefined;
+  characters: any;
   id: string;
   name: string;
   episode: string;

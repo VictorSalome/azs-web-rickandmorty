@@ -17,19 +17,34 @@ const CardInfo: React.FC<{ episodes: Episode }> = ({ episodes }) => {
   return (
     <Card
       sx={{
-        maxWidth: { xs: 150, md: 200, wordBreak: "break-all" },
+        maxWidth: { xs: 150, md: 200 },
+        overflow: "hidden",
       }}
     >
       <CardActionArea>
         <CardMedia component="img" image={LogoCard} alt="logoRick" />
         <CardContent>
-          <Typography gutterBottom component="div" sx={{ fontSize: "0.9rem" }}>
+          <Typography
+            gutterBottom
+            component="div"
+            sx={{
+              fontSize: "0.9rem",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
             {name}
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
-            sx={{ fontSize: "0.8rem" }}
+            sx={{
+              fontSize: "0.8rem",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
           >
             {episode}
           </Typography>
