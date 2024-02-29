@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import PortalRick from "../../assets/RickMortyPortal.jpg";
+import RickeMorty from "../../assets/rickFavorit.jpeg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -32,9 +32,10 @@ interface DetailsBoxProps {
 const DetailsBox: React.FC<DetailsBoxProps> = ({ details }) => {
   const { addFavorites, active, checkActive } = useStateContext();
   const { air_date, episode, name, characters } = details?.episode || {};
+ 
 
   useEffect(() => {
-    checkActive(details?.episode);
+    return checkActive(details?.episode);
   }, [checkActive, details?.episode]);
 
   return (
@@ -54,7 +55,7 @@ const DetailsBox: React.FC<DetailsBoxProps> = ({ details }) => {
               <CardMedia
                 component="img"
                 height="140"
-                image={PortalRick}
+                image={RickeMorty}
                 alt="detail"
               />
             </Card>

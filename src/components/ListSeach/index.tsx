@@ -54,11 +54,11 @@ export const ListSearch = () => {
         <Swiper
           spaceBetween={10}
           navigation
-          className="mySwiper pt-10"
+          className="mySwiper pt-10 "
           breakpoints={{
             // Configurações para dispositivos móveis
-            350: {
-              slidesPerView: 2,
+            640: {
+              slidesPerView: 1,
             },
             // Configurações para desktop/web
             1024: {
@@ -66,13 +66,20 @@ export const ListSearch = () => {
             },
           }}
         >
-          {episodesList?.map((episode) => (
-            <SwiperSlide key={episode.id}>
-              <Link to={`/episode/${episode.id}`}>
-                <CardInfo episodes={episode} />
-              </Link>
-            </SwiperSlide>
-          ))}
+          <div className="flex justify-center">
+            {" "}
+            {/* Centralizando os cards */}
+            {episodesList?.map((episode) => (
+              <SwiperSlide key={episode.id}>
+                <Link to={`/episode/${episode.id}`}>
+                  <div className="sm:w-full md:w-1/3 lg:w-full ml-16">
+                    {/* Condicional para determinar o tamanho do card */}
+                    <CardInfo episodes={episode} />
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </div>
         </Swiper>
       </div>
     </div>

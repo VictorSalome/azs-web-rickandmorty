@@ -29,3 +29,17 @@ export const INFO_EPISODES = gql`
     }
   }
 `;
+
+export const INFO_CHARACTER = gql`
+  query {
+    characters {
+      results {
+        name
+        species
+        gender
+        image
+        id
+      }
+    }
+  }
+`;

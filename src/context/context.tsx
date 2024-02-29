@@ -32,6 +32,8 @@ export const StateContext: FC<{ children: ReactNode }> = ({ children }) => {
     }
   };
 
+
+
   const addFavorites = (episode: Episode) => {
     const checkFavorites = favorites.find((item) => item.id === episode.id);
 

@@ -8,6 +8,7 @@ export interface Episode {
 }
 
 export interface Character {
+  id: any;
   name: string;
   image: string;
   species: string;
