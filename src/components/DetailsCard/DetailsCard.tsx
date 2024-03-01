@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import RickeMorty from "../../assets/rickfavorite.jpeg";
+import RickeMorty from "../../../public/assets/rickfavorite.jpeg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";

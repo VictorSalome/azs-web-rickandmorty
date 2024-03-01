@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import LogoRick from "../../assets/logorickandmorty.png";
-import Backgroud from "../../assets/rickbackgroudspace.png";
+import LogoRick from "../../../public/assets/logorickandmorty.png";
+import Backgroud from "../../../public/assets/rickbackgroudspace.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Tooltip } from "@mui/material";
-import LogoCard from "../../assets/portalimage.png";
+import LogoCard from "../../../public/assets/portalimage.png";
 import { INFO_EPISODE } from "../../querys/index";
 import { Episode } from "../../interfaces/interface";
 
