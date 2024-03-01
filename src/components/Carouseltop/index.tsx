@@ -15,7 +15,7 @@ class CarouselHeader extends Component {
         autoPlay
         showStatus={false}
         showThumbs={false}
-        interval={2000}
+        interval={5000}
         infiniteLoop={true}
       >
         <div>
