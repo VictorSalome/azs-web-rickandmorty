@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import LogoRickAndMorty from "../../assets/LogoRickAndMorty.png";
+import LogoRick from "../../assets/LogoRickAndMorty.png";
 import Bagroud from "../../assets/RickBackgroudSpace.png";
 
 export const Navbar = () => {
@@ -22,7 +22,7 @@ export const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
-                src={LogoRickAndMorty}
+                src={LogoRick}
                 alt="LogoRickAndMorty"
                 className="h-12 w-auto rounded-lg"
               />

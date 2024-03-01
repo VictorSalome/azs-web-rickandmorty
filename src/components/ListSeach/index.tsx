@@ -11,7 +11,7 @@ import "swiper/swiper-bundle.css";
 import { Navigation } from "swiper/modules";
 import { CardEpisodi } from "../CardEpisodi";
 
-// Instalando os componentes necessários do Swiper
+
 SwiperCore.use([Navigation]);
 
 export const ListSearch = () => {

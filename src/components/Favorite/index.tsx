@@ -59,7 +59,7 @@ export const Favorite = () => {
                         favorites.some((fav) => fav.id === episode.id)
                           ? "Episódio removido dos favoritos"
                           : "Episódio adicionado aos favoritos"
-                      } com sucesso!`
+                      } `
                     );
                   }}
                   className={`ml-4 text-2xl cursor-pointer ${
