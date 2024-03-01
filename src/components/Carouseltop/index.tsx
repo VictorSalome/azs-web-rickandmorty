@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { isMobile } from "react-device-detect"; // Importando o método isMobile
+import { isMobile } from "react-device-detect";
 import MortyAndRick1 from "../../../public/assets/rickandmortycar.png";
 import MortyAndRick2 from "../../../public/assets/rickmortyportal.jpg";
 import MortyAndRick3 from "../../../public/assets/rickandmortyall.jpg";
@@ -16,7 +16,7 @@ class CarouselHeader extends Component {
         autoPlay={!isMobile} // Desativa o autoplay se for um dispositivo móvel
         showStatus={false}
         showThumbs={false}
-        interval={6000}
+        interval={3000}
         infiniteLoop={true}
         swipeable={true} // Habilita o swipe em todos os dispositivos
       >
