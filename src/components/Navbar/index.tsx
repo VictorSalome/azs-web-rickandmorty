@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import LogoRick from "../../assets/LogoRickAndMorty.png";
-import Bagroud from "../../assets/RickBackgroudSpace.png";
+import LogoRick from "../../assets/logoRickAndMorty.png";
+import Backgroud from "../../assets/RickBackgroudSpace.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <nav
       className="fixed top-0 left-0 w-full "
-      style={{ backgroundImage: `url(${Bagroud})`, zIndex: 50 }}
+      style={{ backgroundImage: `url(${Backgroud})`, zIndex: 50 }}
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
