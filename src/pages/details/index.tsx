@@ -2,7 +2,7 @@ import { useLocation } from "react-router";
 import { useQuery } from "@apollo/client";
 import { INFO_EPISODE } from "../../querys/index";
 import { Navbar } from "../../components/Navbar";
-import DetailsBox from "../../components/DetailsCard/DetailsCard";
+import { DetailsCard } from "../../components/DetailsCard/DetailsCard";
 
 export const Details = () => {
   const location = useLocation();
@@ -21,7 +21,7 @@ export const Details = () => {
   return (
     <>
       <Navbar />
-      <DetailsBox details={data} />
+      <DetailsCard details={data} />
     </>
   );
 };

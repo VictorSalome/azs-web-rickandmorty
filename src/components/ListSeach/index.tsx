@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { INFO_EPISODES } from "../../querys";
 import { Link } from "react-router-dom";
-import CardInfo from "../CardEpisodi";
+
 import { Episode } from "../../interfaces/interface";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation } from "swiper/modules";
+import { CardEpisodi } from "../CardEpisodi";
 
 // Instalando os componentes necessários do Swiper
 SwiperCore.use([Navigation]);
@@ -73,7 +74,7 @@ export const ListSearch = () => {
               <SwiperSlide key={episode.id}>
                 <Link to={`/episode/${episode.id}`}>
                   <div className="sm:w-full md:w-1/3 lg:w-full ml-16 md:ml-1">
-                    <CardInfo episodes={episode} />
+                    <CardEpisodi episodes={episode} />
                   </div>
                 </Link>
               </SwiperSlide>

@@ -1,4 +1,4 @@
-import CharacterCarousel from "../../components/Character/index.tsx";
+import { CharacterCarousel } from "../../components/Character/index.tsx";
 import { Footer } from "../../components/Footer/index.tsx";
 import { Header } from "../../components/Header.tsx";
 import { ListSearch } from "../../components/ListSeach/index.tsx";

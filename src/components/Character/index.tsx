@@ -2,7 +2,7 @@ import React from "react";
 
 import { CardCharacter } from "../CardCharacter";
 
-const CharacterCarousel: React.FC = () => {
+export const CharacterCarousel: React.FC = () => {
   return (
     <div className="text-black relative w-4/5 mx-auto ">
       <div className="max-w-8xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -16,5 +16,3 @@ const CharacterCarousel: React.FC = () => {
     </div>
   );
 };
-
-export default CharacterCarousel;

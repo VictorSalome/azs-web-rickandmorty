@@ -9,7 +9,7 @@ import LogoCard from "../../assets/Portal-image.png";
 import { INFO_EPISODE } from "../../querys/index";
 import { Episode } from "../../interfaces/interface";
 
-const CardInfo: React.FC<{ episodes: Episode }> = ({ episodes }) => {
+export const CardEpisodi: React.FC<{ episodes: Episode }> = ({ episodes }) => {
   const { id, name, episode, air_date } = episodes;
 
   const { data } = useQuery(INFO_EPISODE, { variables: { id } });
@@ -64,5 +64,3 @@ const CardInfo: React.FC<{ episodes: Episode }> = ({ episodes }) => {
     </Card>
   );
 };
-
-export default CardInfo;

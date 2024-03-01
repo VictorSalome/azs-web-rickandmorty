@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Patrick Hand", cursive;
 }
 
 body {
@@ -16,4 +17,15 @@ body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.custom-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00b5cc;
+  text-shadow: #b2df28 2px 2px;
+}
+
+.custom-paragraph {
+  max-width: 32rem;
 }

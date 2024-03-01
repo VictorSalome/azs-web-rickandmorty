@@ -1,6 +1,6 @@
 export interface Episode {
   image: string | undefined;
-  characters: any;
+  characters: string;
   id: string;
   name: string;
   episode: string;
@@ -8,7 +8,7 @@ export interface Episode {
 }
 
 export interface Character {
-  id: any;
+  id: string;
   name: string;
   image: string;
   species: string;
