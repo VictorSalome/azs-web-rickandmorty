@@ -7,57 +7,42 @@ import Typography from "@mui/material/Typography";
 import { FaHeart } from "react-icons/fa";
 import { format } from "date-fns";
 import { useStateContext } from "../../context/context";
-
-interface Character {
-  name: string;
-  image: string;
-  species: string;
-  status: string;
-}
-
-interface Episode {
-  id: string;
-  air_date: string;
-  episode: string;
-  name: string;
-  characters: Character[];
-}
+import { Episode, Character } from "../../interfaces/interface";
 
 interface DetailsBoxProps {
   details: {
     episode: Episode;
-    
   };
 }
 
 export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
   const { addFavorites, active, checkActive } = useStateContext();
-  const { air_date, episode, name, characters } = details?.episode || {};
+  const { air_date, episode, name, characters } = details.episode;
 
   useEffect(() => {
-    return checkActive(details.episode);
-  }, [checkActive, details?.episode]);
+    checkActive(details.episode);
+  }, [checkActive, details.episode]);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center py-20 transition duration-500">
+    <section className="relative min-h-screen flex flex-col justify-center  transition duration-500">
       <div className="w-full max-w-screen-90 mx-auto mb-10 shadow-xl bg-gray-900 rounded-3xl xl:w-4/5">
         <div className="relative flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 p-5 flex justify-center items-center">
-            <span
-              onClick={() => addFavorites(details.episode)}
-              className={`relative text-white text-2xl m-4 cursor-pointer ${
-                active ? "text-red-500" : ""
-              }`}
-            >
-              <FaHeart />
-            </span>
-            <Card className="w-full max-w-md ">
+          <div className="w-full md:w-1/2 p-2 flex justify-center items-center">
+            <Card className="w-full max-w-md relative">
               <CardMedia
                 component="img"
                 height="140"
                 image={RickeMorty}
                 alt="detail"
               />
+              <span
+                onClick={() => addFavorites(details.episode)}
+                className={`absolute bottom-0 right-0 text-white text-2xl m-4 cursor-pointer ${
+                  active ? "text-red-500" : ""
+                }`}
+              >
+                <FaHeart />
+              </span>
             </Card>
           </div>
           <div className="w-full md:w-1/2 p-5">
@@ -93,8 +78,9 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
             Personagens deste episódio
           </h3>
           <div className="w-full flex flex-wrap justify-center">
-            {characters?.map((person: Character, index: number) => (
-              <div className="flex flex-col items-center m-2" key={index}>
+            {/* Mapeando e exibindo os personagens */}
+            {characters?.map((person: Character) => (
+              <div className="flex flex-col items-center m-2" key={person.id}>
                 <Card className="max-w-xs bg-gray-800">
                   <CardMedia
                     component="img"
