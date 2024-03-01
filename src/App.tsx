@@ -3,18 +3,20 @@ import AppRoutes from "./routes";
 import { ApolloProvider } from "@apollo/client";
 import client from "./service";
 import { ToastContainer } from "react-toastify";
-import { StateContext } from "./context/context";
+
+import "react-toastify/dist/ReactToastify.css";
+import { StateContextProvider } from "./context/context";
 
 function App() {
   return (
-    <StateContext>
+    <StateContextProvider>
       <BrowserRouter>
         <ApolloProvider client={client}>
           <ToastContainer />
           <AppRoutes />
         </ApolloProvider>
       </BrowserRouter>
-    </StateContext>
+    </StateContextProvider>
   );
 }
 

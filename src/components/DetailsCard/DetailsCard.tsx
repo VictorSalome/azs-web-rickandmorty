@@ -6,8 +6,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { FaHeart } from "react-icons/fa";
 import { format } from "date-fns";
-import { useStateContext } from "../../context/context";
+
 import { Episode, Character } from "../../interfaces/interface";
+import { useStateContext } from "../../contextUtils/contextUtils";
 
 interface DetailsBoxProps {
   details: {
@@ -16,12 +17,21 @@ interface DetailsBoxProps {
 }
 
 export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
-  const { addFavorites, active, checkActive } = useStateContext();
+  const { addFavorites, active, checkActive, favorites } = useStateContext(); // Adicione 'favorites' aqui
   const { air_date, episode, name, characters } = details.episode;
 
   useEffect(() => {
     checkActive(details.episode);
   }, [checkActive, details.episode]);
+
+  // Função para adicionar/remover o episódio dos favoritos e armazenar no localStorage
+  const handleFavorites = () => {
+    addFavorites(details.episode); // Adiciona ou remove o episódio dos favoritos no contexto
+    const updatedFavorites = favorites.includes(details.episode)
+      ? favorites.filter((fav) => fav !== details.episode)
+      : [...favorites, details.episode];
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // Armazena os favoritos no localStorage
+  };
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center  transition duration-500">
@@ -36,9 +46,9 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
                 alt="detail"
               />
               <span
-                onClick={() => addFavorites(details.episode)}
-                className={`absolute bottom-0 right-0 text-white text-2xl m-4 cursor-pointer ${
-                  active ? "text-red-500" : ""
+                onClick={handleFavorites} // Altere para a função handleFavorites
+                className={`absolute bottom-0 right-0 text-2xl m-4 cursor-pointer ${
+                  active ? "text-red-500" : "text-white"
                 }`}
               >
                 <FaHeart />
@@ -87,6 +97,7 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
                     height="140"
                     image={person.image}
                     alt={person.name}
+                    title={person.name} // Adiciona a dica de ferramenta com o nome completo do personagem
                   />
                   <CardContent>
                     <Typography
@@ -98,7 +109,9 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
                         textShadow: "#b2df28 2px 2px",
                       }}
                     >
-                      {person.name}
+                      {person.name.length > 15
+                        ? `${person.name.substring(0, 15)}...`
+                        : person.name}
                     </Typography>
                     <Typography
                       variant="body2"
