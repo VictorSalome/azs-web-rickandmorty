@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import LogoRick from "../../assets/logoRickAndMorty.png";
-import Backgroud from "../../assets/RickBackgroudSpace.png";
+import Backgroud from "../../assets/rickBackgroudSpace.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

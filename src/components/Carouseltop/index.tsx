@@ -1,11 +1,11 @@
 import { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import MortyAndRick1 from "../../assets/RickMortyPortal.jpg";
-import MortyAndRick2 from "../../assets/RickAndmortyCar.png";
-import MortyAndRick3 from "../../assets/RickandMortyAll.jpg";
-import MortyAndRick4 from "../../assets/RickFavorite.jpeg";
-import MortyAndRick5 from "../../assets/MortyAlone.jpeg";
+import MortyAndRick1 from "../../assets/rickMortyPortal.jpg";
+import MortyAndRick2 from "../../assets/rickAndmortyCar.png";
+import MortyAndRick3 from "../../assets/rickandMortyAll.jpg";
+import MortyAndRick4 from "../../assets/rickFavorite.jpeg";
+import MortyAndRick5 from "../../assets/mortyAlone.jpeg";
 
 class CarouselHeader extends Component {
   render() {
