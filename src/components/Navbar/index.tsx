@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import LogoRickAndMorty from "../../assets/logoRickAndMorty.png";
+import LogoRickAndMorty from "../../assets/LogoRickAndMorty.png";
+import Bagroud from "../../assets/RickBackgroudSpace.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,10 @@ export const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav
+      className="fixed top-0 left-0 w-full "
+      style={{ backgroundImage: `url(${Bagroud})`, zIndex: 50 }}
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -20,7 +24,7 @@ export const Navbar = () => {
               <img
                 src={LogoRickAndMorty}
                 alt="LogoRickAndMorty"
-                className="h-10 w-auto rounded-lg"
+                className="h-12 w-auto rounded-lg"
               />
             </Link>
           </div>
@@ -28,13 +32,13 @@ export const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-xl font-bold"
               >
                 Inicio
               </Link>
               <Link
                 to="/favorites"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-xl font-bold"
               >
                 Favoritos
               </Link>

@@ -14,3 +14,16 @@ export interface Character {
   species: string;
   status: string;
 }
+
+export interface DetailsBoxProps {
+  details: {
+    episode: Episode;
+  };
+}
+
+export interface StateContextType {
+  favorites: Episode[];
+  active: boolean;
+  addFavorites: (episode: Episode) => void;
+  checkActive: (episode: Episode) => void;
+}

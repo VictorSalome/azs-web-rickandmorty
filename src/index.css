@@ -6,11 +6,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Patrick Hand", cursive;
 }
 
 body {
-  background-image: url(./assets/space.png);
+  background-image: url(./assets/RickBackgroudSpace.png);
+  font-family: "Patrick Hand", cursive;
 }
 
 .container {
@@ -22,8 +22,6 @@ body {
 .custom-heading {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #00b5cc;
-  text-shadow: #b2df28 2px 2px;
 }
 
 .custom-paragraph {

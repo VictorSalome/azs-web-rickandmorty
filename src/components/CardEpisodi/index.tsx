@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Tooltip } from "@mui/material";
-import LogoCard from "../../assets/Portal-image.png";
+import LogoCard from "../../assets/PortalImage.png";
 import { INFO_EPISODE } from "../../querys/index";
 import { Episode } from "../../interfaces/interface";
 
@@ -21,7 +21,7 @@ export const CardEpisodi: React.FC<{ episodes: Episode }> = ({ episodes }) => {
         sx={{
           maxWidth: { xs: 200, md: 200 },
           overflow: "hidden",
-          marginLeft: { xs: "-20px", md: "0px" }, // Adicione valores de margem esquerda diferentes para telas xs e md
+          marginLeft: { xs: "-20px", md: "0px" },
         }}
       >
         <CardActionArea>
@@ -31,33 +31,46 @@ export const CardEpisodi: React.FC<{ episodes: Episode }> = ({ episodes }) => {
               gutterBottom
               component="div"
               sx={{
-                fontSize: "0.9rem",
+                fontSize: "1rem",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
+                fontWeight: "bold",
+                fontFamily: "'Patrick Hand', cursive", // Definindo a fonte "Patrick Hand"
               }}
             >
               {name}
             </Typography>
             <Typography
-              variant="body2"
-              color="text.secondary"
               sx={{
-                fontSize: "0.8rem",
+                fontSize: "0.9rem",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
               }}
+              color="text.secondary"
             >
               {episode}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography
+              sx={{
+                fontSize: "0.9rem",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+              color="text.secondary"
+            >
               {format(new Date(air_date), "dd/MM/yyyy")}
             </Typography>
             <Typography
-              variant="body2"
+              sx={{
+                fontSize: "0.9rem",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
               color="text.secondary"
-              sx={{ fontSize: "0.8rem" }}
             >
               Personagens: {data?.episode?.characters.length}
             </Typography>

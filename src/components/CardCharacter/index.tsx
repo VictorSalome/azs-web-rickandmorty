@@ -5,16 +5,9 @@ import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation } from "swiper/modules";
+import { Character } from "../../interfaces/interface";
 
 SwiperCore.use([Navigation]);
-
-interface Character {
-  name: string;
-  species: string;
-  gender: string;
-  image: string;
-  id: string;
-}
 
 export const CardCharacter: React.FC = () => {
   const { loading, error, data } = useQuery(INFO_CHARACTER);

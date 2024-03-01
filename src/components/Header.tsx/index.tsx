@@ -1,8 +1,8 @@
-import CarouselHeader from "../Carousel";
+import CarouselHeader from "../Carouseltop";
 
 export const Header = () => {
   return (
-    <div className="text-white relative p-3">
+    <div className="text-white relative p-3 mt-20">
       {/* Estilo para dispositivos móveis */}
       <div className="block md:hidden relative max-w-screen-lg mx-auto rounded-lg overflow-hidden">
         <div>

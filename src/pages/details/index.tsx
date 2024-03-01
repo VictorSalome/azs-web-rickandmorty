@@ -1,7 +1,7 @@
 import { useLocation } from "react-router";
 import { useQuery } from "@apollo/client";
 import { INFO_EPISODE } from "../../querys/index";
-import { Navbar } from "../../components/Navbar";
+
 import { DetailsCard } from "../../components/DetailsCard/DetailsCard";
 
 export const Details = () => {
@@ -20,7 +20,6 @@ export const Details = () => {
 
   return (
     <>
-      <Navbar />
       <DetailsCard details={data} />
     </>
   );

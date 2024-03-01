@@ -46,30 +46,28 @@ export const ListSearch = () => {
           <div className="ml-auto flex items-center">
             <input
               type="text"
-              className="py-1 mr-2 rounded-md border border-gray-300"
+              className="py-1 mr-2 rounded-md border text-white focus:outline-none bg-transparent p-1"
               onChange={(e) => setSearchItem(e.target.value)}
+              placeholder="Search..."
             />
             <FaMagnifyingGlass className="text-white text-2xl" />
           </div>
         </div>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={1}
           navigation
           className="mySwiper pt-10 "
           breakpoints={{
-            // Configurações para dispositivos móveis
             640: {
               slidesPerView: 1,
             },
-            // Configurações para desktop/web
+
             1024: {
               slidesPerView: 7,
             },
           }}
         >
           <div className="flex justify-center">
-            {" "}
-            {/* Centralizando os cards */}
             {episodesList?.map((episode) => (
               <SwiperSlide key={episode.id}>
                 <Link to={`/episode/${episode.id}`}>

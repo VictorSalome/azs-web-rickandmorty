@@ -1,15 +1,8 @@
 // context.tsx
 
 import { createContext, useState, FC, ReactNode } from "react";
-import { Episode } from "../interfaces/interface";
+import { Episode, StateContextType } from "../interfaces/interface";
 import { toast } from "react-toastify";
-
-interface StateContextType {
-  favorites: Episode[];
-  active: boolean;
-  addFavorites: (episode: Episode) => void;
-  checkActive: (episode: Episode) => void;
-}
 
 export const Context = createContext<StateContextType>({
   favorites: [],
@@ -56,5 +49,3 @@ export const StateContextProvider: FC<{ children: ReactNode }> = ({
     </Context.Provider>
   );
 };
-
-

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import RickeMorty from "../../assets/rickFavorit.jpeg";
+import RickeMorty from "../../assets/RickFavorite.jpeg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -7,14 +7,8 @@ import Typography from "@mui/material/Typography";
 import { FaHeart } from "react-icons/fa";
 import { format } from "date-fns";
 
-import { Episode, Character } from "../../interfaces/interface";
+import { Character, DetailsBoxProps } from "../../interfaces/interface";
 import { useStateContext } from "../../contextUtils/contextUtils";
-
-interface DetailsBoxProps {
-  details: {
-    episode: Episode;
-  };
-}
 
 export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
   const { addFavorites, active, checkActive, favorites } = useStateContext(); // Adicione 'favorites' aqui
@@ -34,7 +28,7 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center  transition duration-500">
+    <section className="relative min-h-screen flex flex-col justify-center transition duration-500 mt-20">
       <div className="w-full max-w-screen-90 mx-auto mb-10 shadow-xl bg-gray-900 rounded-3xl xl:w-4/5">
         <div className="relative flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 p-2 flex justify-center items-center">
@@ -46,7 +40,7 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
                 alt="detail"
               />
               <span
-                onClick={handleFavorites} // Altere para a função handleFavorites
+                onClick={handleFavorites}
                 className={`absolute bottom-0 right-0 text-2xl m-4 cursor-pointer ${
                   active ? "text-red-500" : "text-white"
                 }`}
@@ -58,12 +52,14 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
           <div className="w-full md:w-1/2 p-5">
             <div className="flex flex-col justify-between h-full">
               <div className="flex justify-between m-5 text-white">
-                <h3 className="text-lg font-bold">Episódio: {episode}</h3>
-                <h3 className="text-lg">
+                <h3 className="text-lg font-bold" key="episode">
+                  Episódio: {episode}
+                </h3>
+                <h3 className="text-lg" key="air_date">
                   Disponível: {format(new Date(air_date), "dd/MM/yyyy")}
                 </h3>
               </div>
-              <div className="text-center text-white gap-">
+              <div className="text-center text-white gap-" key="name">
                 <h1 className="text-4xl font-bold text-center text-blue-600">
                   {name}
                 </h1>
@@ -88,18 +84,17 @@ export const DetailsCard: React.FC<DetailsBoxProps> = ({ details }) => {
             Personagens deste episódio
           </h3>
           <div className="w-full flex flex-wrap justify-center">
-            {/* Mapeando e exibindo os personagens */}
-            {characters?.map((person: Character) => (
-              <div className="flex flex-col items-center m-2" key={person.id}>
+            {characters?.map((person: Character, index: number) => (
+              <div className="flex flex-col items-center m-2" key={index}>
                 <Card className="max-w-xs bg-gray-800">
                   <CardMedia
                     component="img"
                     height="140"
                     image={person.image}
                     alt={person.name}
-                    title={person.name} // Adiciona a dica de ferramenta com o nome completo do personagem
+                    title={person.name}
                   />
-                  <CardContent>
+                  <CardContent key={`${person.id}-content`}>
                     <Typography
                       gutterBottom
                       variant="h5"
