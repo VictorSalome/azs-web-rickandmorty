@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Tooltip } from "@mui/material";
-import LogoCard from "../../assets/portalImage.png";
+import LogoCard from "../../assets/portalimage.png";
 import { INFO_EPISODE } from "../../querys/index";
 import { Episode } from "../../interfaces/interface";
 
@@ -36,7 +36,7 @@ export const CardEpisodi: React.FC<{ episodes: Episode }> = ({ episodes }) => {
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
                 fontWeight: "bold",
-                fontFamily: "'Patrick Hand', cursive", 
+                fontFamily: "'Patrick Hand', cursive",
               }}
             >
               {name}
