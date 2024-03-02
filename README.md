@@ -67,6 +67,9 @@ Modo Mobile
 
 ![Rick and Morty](/public/imgReadme/mobile5.png)
 
+Link do Deploy
+Projeto Rick and Morty - https://azs-web-rickandmorty-zeta.vercel.app/
+
 ## Reconhecimentos
 
 - [React](https://reactjs.org/)
