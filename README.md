@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Projeto Rick and Morty
 
-Currently, two official plugins are available:
+Este projeto é uma aplicação React TypeScript baseada na famosa série de desenho animado "Rick and Morty".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React**: Utilizado como biblioteca principal para construir interfaces de usuário.
+- **TypeScript**: Utilizado para tipagem estática e melhorias na qualidade do código.
+- **Tailwind CSS**: Utilizado para estilização, fornecendo uma abordagem de utilidade-first.
+- **Material-UI**: Biblioteca de componentes utilizada para criar uma interface de usuário consistente e agradável.
+- **Apollo Client**: Utilizado para consumir a API GraphQL e gerenciar o estado global da aplicação.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instruções de Inicialização
 
-- Configure the top-level `parserOptions` property like this:
+Para inicializar o projeto, siga as etapas abaixo:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone o repositório:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd project-directory
+   ```
+3. Instale as dependências utilizando yarn ou npm:
+   ```bash
+   yarn install
+   ```
+   ou
+   ```bash
+   npm install
+   ```
+4. Execute o projeto em modo de desenvolvimento:
+   ```bash
+   yarn dev
+   ```
+   ou
+   ```bash
+   npm run dev
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Isso iniciará o servidor de desenvolvimento e abrirá a aplicação em seu navegador padrão.
+
+## Imagens do Projeto
+
+![Rick and Morty](/public/imgReadme/img1.png)
+
+![Rick and Morty](/public/imgReadme/mobile1.png)
+
+![Rick and Morty](/public/imgReadme/mobile2.png)
+
+![Rick and Morty](/public/imgReadme/img2.png)
+
+![Rick and Morty](/public/imgReadme/mobile3.png)
+
+![Rick and Morty](/public/imgReadme/img3.png)
+
+![Rick and Morty](/public/imgReadme/mobile4.png)
+
+![Rick and Morty](/public/imgReadme/img4.png)
+
+![Rick and Morty](/public/imgReadme/mobile5.png)
+
+## Reconhecimentos
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Material-UI](https://material-ui.com/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
