@@ -45,21 +45,25 @@ Isso iniciará o servidor de desenvolvimento e abrirá a aplicação em seu nave
 
 ## Imagens do Projeto
 
+Modo Web
+
 ![Rick and Morty](/public/imgReadme/img1.png)
+
+![Rick and Morty](/public/imgReadme/img2.png)
+
+![Rick and Morty](/public/imgReadme/img3.png)
+
+![Rick and Morty](/public/imgReadme/img4.png)
+
+Modo Mobile
 
 ![Rick and Morty](/public/imgReadme/mobile1.png)
 
 ![Rick and Morty](/public/imgReadme/mobile2.png)
 
-![Rick and Morty](/public/imgReadme/img2.png)
-
 ![Rick and Morty](/public/imgReadme/mobile3.png)
 
-![Rick and Morty](/public/imgReadme/img3.png)
-
 ![Rick and Morty](/public/imgReadme/mobile4.png)
-
-![Rick and Morty](/public/imgReadme/img4.png)
 
 ![Rick and Morty](/public/imgReadme/mobile5.png)
 
